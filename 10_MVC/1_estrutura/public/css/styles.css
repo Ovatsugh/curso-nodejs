@@ -1,0 +1,302 @@
+body {
+    font-family: "Capriola", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    /* background-image: url('https://1.bp.blogspot.com/-TSel2Tq3WhE/X1vn96ovo3I/AAAAAAAAHX8/nQaMVox1ARMQ4jYtJTcsEczLz6ztanHewCLcBGAsYHQ/s16000/backgrounds%2Bpowerpoint%2B47.jpg'); /* URL da sua imagem */
+    /* background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a área do corpo */
+    /* background-position: center; /* Centraliza a imagem no corpo */
+}
+
+/* Estilos do Navbar */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar-right a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar-left {
+    float: left;
+}
+
+.navbar-left a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    /* Cor do texto */
+    font-size: 1.5em;
+    /* Tamanho da fonte */
+    font-weight: bold;
+    /* Peso da fonte */
+}
+
+.navbar-right {
+    float: right;
+}
+
+.navbar-left img {
+    width: 50px;
+    /* Defina a largura desejada */
+    height: 50px;
+    /* Mantém a proporção da imagem */
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-image: url('background.jpg');
+    /* Adicione o caminho da sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fundo branco transparente */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+
+#add-task-form {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#add-task-form h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Estilos adicionais para a lista de tasks */
+
+.container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* Ajuste opcional para alinhar o texto */
+}
+
+.tasks-container {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+.task-actions button {
+    margin-left: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.task-actions {
+    display: flex;
+    flex-direction: row;
+    /* Define a direção dos itens como horizontal */
+    padding-left: 200px;
+}
+
+.task-actions form {
+    margin-right: 10px;
+    /* Adiciona um espaçamento entre os formulários */
+}
+
+.tittle {
+    color: #45a049;
+}
+
+.marked {
+    text-decoration: line-through;
+    /* Adiciona uma linha atravessada */
+    color: #888;
+    /* Altera a cor do texto para uma cor mais esmaecida */
+    /* Outras propriedades de estilo conforme necessário */
+}
+
+/* Estilos para a aba "Sobre" */
+
+.container {
+    padding: 20px;
+}
+
+.about-content {
+    line-height: 1.6;
+    /* Espaçamento entre linhas */
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    /* Espaçamento entre parágrafos */
+}
+
+.content p {
+    background-color: yellow;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar a {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .navbar-left a {
+        font-size: 1em;
+    }
+
+    .navbar-left img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .btn {
+        padding: 12px 24px;
+    }
+
+    #add-task-form {
+        padding: 20px;
+    }
+
+    input[type="text"],
+    textarea {
+        width: calc(100% - 20px);
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        padding: 8px 16px;
+    }
+
+    .task {
+        width: 95%; /* Defina a largura desejada */
+        max-width: 400px; /* Define a largura máxima */
+        margin: 10px auto; /* Centraliza a div e adiciona espaço entre as tasks */
+        padding: 10px; /* Adiciona espaço interno */
+    }
+    
+    .task-info {
+        margin-bottom: 10px; /* Adiciona espaço entre o título e os botões */
+    }
+    
+    .task-actions {
+        display: flex;
+        flex-direction: row;
+        padding-left: 10px;
+        margin: 5px;
+    }
+    
+
+    
+}

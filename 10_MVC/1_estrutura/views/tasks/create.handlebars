@@ -1,0 +1,16 @@
+<div class="container">
+    <div id="add-task-form"> <!-- Adicionando um ID exclusivo -->
+        <h1>Add Task</h1>
+        <form action="/tasks/add" method="POST">
+            <div class="form-group">
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title" required><br>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label><br>
+                <textarea id="description" name="description" rows="4" required></textarea><br>
+            </div>
+            <button type="submit">Add Task</button>
+        </form>
+    </div>
+</div>

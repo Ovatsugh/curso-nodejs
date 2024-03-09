@@ -1,0 +1,13 @@
+ <h1>Usuários Cadastrados:</h1>
+
+    <div class="container">
+        <div class="card-container">
+            {{#each users}}
+            <a href="/users/{{this.id}}" class="card-link">
+                <div class="card">
+                    <p>{{this.name}}</p>
+                </div>
+            </a>
+            {{/each}}
+        </div>
+    </div>

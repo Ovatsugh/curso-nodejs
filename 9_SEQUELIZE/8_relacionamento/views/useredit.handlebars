@@ -1,0 +1,28 @@
+<div class="form-container">
+    <h1>Atualize o usuário {{user.name}}</h1>
+    <form action="/users/edit" method="POST" class="custom-form">
+        <input type="hidden" name="id" value="{{user.id}}">
+        <div class="form-control">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" value="{{user.name}}">
+        </div>
+
+        <div class="form-control">
+            <label for="occupation">Ocupação:</label>
+            <input type="text" id="occupation" name="occupation" value="{{user.ocuppation}}">
+        </div>
+
+        <div class="form-control form-checkbox">
+            <label for="newsletter">Enviar Promoções?</label>
+
+            {{#if user.newsletter}}
+            <input type="checkbox" id="newsletter" name="newsletter" checked>
+            {{else}} 
+            <input type="checkbox" id="newsletter" name="newsletter">
+            {{/if}}
+            
+        </div>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+</div>

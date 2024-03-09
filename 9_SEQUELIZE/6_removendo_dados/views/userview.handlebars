@@ -1,0 +1,22 @@
+<div class="container">
+        <h1>Detalhes do Usuário</h1>
+
+        <div class="user-details">
+            <div class="user-info">
+                <strong>Nome:</strong> <span id="user-name">{{user.name}}</span><br>
+                <strong>Ocupação: </strong> <span id="user-occupation">{{user.ocuppation}}</span>
+            </div>
+
+            <form action="/users/delete/{{user.id}}" method="POST">
+            
+            <input type="submit" value="excluir">
+            
+            </form>
+
+            <form action="/users/edit/{{user.id}}" method="POST">
+            
+            <input type="submit" value="editar">
+            
+            </form>
+        </div>
+    </div>
