@@ -18,7 +18,6 @@ module.exports = class UserController {
             res.status(422).json({ message: 'O nome é obrigatorio' })
             return
         }
-        console.log(name, email, phone, password, confirmpassword)
 
         if (!email) return res.status(422).json({ message: 'O email é obrigatorio' })
         if (!phone) return res.status(422).json({ message: 'O phone é obrigatorio' })
@@ -55,14 +54,16 @@ module.exports = class UserController {
 
     static async login(req, res) {
         const { email, password } = req.body
-        const user = await User.findOne({ email: email })
-        const checkPassword = await bcrypt.compare(password, user.password)
+  
 
 
         //validations
         if (!email) return res.status(422).json({ message: 'O email é obrigatorio' })
         if (!password) return res.status(422).json({ message: 'O password é obrigatorio' })
         if (!user) return res.status(422).json({ message: 'Nenhum usuário encontrado com esse email' })
+
+        const user = await User.findOne({ email: email })
+        const checkPassword = await bcrypt.compare(password, user.password)
 
         //check password
         if (!checkPassword) return res.status(422).json({ message: 'Senha inválida' })
