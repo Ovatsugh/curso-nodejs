@@ -10,7 +10,9 @@ const createUserToken = require('../helpers/create-user-tokens')
 
 
 module.exports = class UserController {
+
     static async register(req, res) {
+        console.log(req.body)
         const { name, email, phone, password, confirmpassword } = req.body
 
         //validations
@@ -54,16 +56,16 @@ module.exports = class UserController {
 
     static async login(req, res) {
         const { email, password } = req.body
-  
-
+        const user = await User.findOne({ email: email })
 
         //validations
         if (!email) return res.status(422).json({ message: 'O email é obrigatorio' })
         if (!password) return res.status(422).json({ message: 'O password é obrigatorio' })
         if (!user) return res.status(422).json({ message: 'Nenhum usuário encontrado com esse email' })
 
-        const user = await User.findOne({ email: email })
         const checkPassword = await bcrypt.compare(password, user.password)
+
+
 
         //check password
         if (!checkPassword) return res.status(422).json({ message: 'Senha inválida' })

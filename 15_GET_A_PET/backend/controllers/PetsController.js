@@ -166,7 +166,7 @@ module.exports = class PetsController {
         if (!age) return res.status(422).json({ message: 'A idade é obrigatório' })
         if (!weight) return res.status(422).json({ message: 'O peso é obrigatório' })
         if (!color) return res.status(422).json({ message: 'A cor  é obrigatória' })
-        if (images.length === 0) return res.status(422).json({ message: 'A imagem é obrigatória' })
+        // if (images.length > 0) return res.status(422).json({ message: 'A imagem é obrigatória' })
         //check if pet exists 
         const pet = await Pet.findById(id)
 
@@ -181,17 +181,23 @@ module.exports = class PetsController {
         updateData.age = age
         updateData.weight = weight
         updateData.color = color
-        updateData.image = []
-        images.map((img) => {
-            updateData.image.push(img.filename)
-        })
+        updateData.images = []
+
+        if (images.length > 0) {
+
+            images.map((img) => {
+                updateData.images.push(img.filename)
+            })
+
+
+        }
 
         try {
             await Pet.findByIdAndUpdate(id, updateData)
             res.status(200).json({ message: 'Pet atualizado com sucesso' })
 
         } catch (error) {
-            console.log(error)
+
             res.status(500).json({ message: error })
         }
 
@@ -249,7 +255,7 @@ module.exports = class PetsController {
 
         pet.available = false
         await Pet.findByIdAndUpdate(id, pet)
-        res.status(200).json({message: "Parabéns, o ciclo de adoção foi finalizado com sucesso"})
+        res.status(200).json({ message: "Parabéns, o ciclo de adoção foi finalizado com sucesso" })
     }
 
 }
